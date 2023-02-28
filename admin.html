@@ -29,7 +29,10 @@
             <h5>New Link</h5>
             <form action="/admin/links/new" method="POST">
                 <label for="url">URL*</label>
-                <div class="row">
+                <input class="u-full-width" placeholder="https://" type="url" name="url"
+                               {{ with .OGPURL }} value= "{{.}}" {{ end }}
+                        >
+                <!-- <div class="row">
                     <div class="eight columns">
                         <input class="u-full-width" placeholder="https://" type="url" name="url"
                                {{ with .OGPURL }} value= "{{.}}" {{ end }}
@@ -38,7 +41,7 @@
                     <div class="four columns">
                         <input class="u-full-width" type="submit" type="submit" name="submit" value="Fetch Data">
                     </div>
-                </div>
+                </div> -->
                 
                 <label for="text">Text*</label>
                 <input class="u-full-width" placeholder="Description" type="text" name="text"
